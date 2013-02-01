@@ -12,7 +12,7 @@ The ANCEL API needs that you register all phones and groups you will be sending 
 All administration APIs are in the `clj-ancel-sms.administration` module. Basically phones and groups management.
 
 ``` clojure
-(ns admin
+(ns test.admin
   (:require [clj-ancel-sms.administration :as admin])
   (:use [slingshot.slingshot :only [try+ throw+]]))
 
@@ -30,7 +30,7 @@ SMSs can be sent to a single cellphone or to a group. In case the message is sen
 Ancel is doing the list expansion.
 
 ```clojure
-(ns messages
+(ns test.messages
   (:require [clj-ancel-sms.messaging :as messaging])
   (:use [slingshot.slingshot :only [try+ throw+]]))
 
