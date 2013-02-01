@@ -36,8 +36,8 @@
                                            :servicio service
                                            :celular phone
                                            :nroTramite tracking})
-        ok-code (re-matches #"OK\|(\d+)" response)]
-    (or ok-code
+        ok-code (re-matches #"OK\|(\d+)\n" response)]
+    (or (and ok-code true)
         (throw+ {:type ::api-failure :response (api/parse-error response)}))))
 
 (defn unregister-phone

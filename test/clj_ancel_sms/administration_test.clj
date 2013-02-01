@@ -11,8 +11,8 @@
        (http/post "http://www.ancelutil.com.uy:8090/admEmpresa"
                   {:body "operacion=altaGrupo&servicio=1&grupo=grupo1"
                    :content-type "application/x-www-form-urlencoded"
-                   :conn-timeout 1000
-                   :socket-timeout 1000
+                   :conn-timeout 5000
+                   :socket-timeout 5000
                    :accept "text/plain"}) => {:body "OK\n"} :times 1))
 
 (fact "Group fails with an exeption if api fails"
@@ -25,8 +25,8 @@
        (http/post "http://www.ancelutil.com.uy:8090/admEmpresa"
                   {:body "operacion=altaGrupo&servicio=1&grupo=grupo1"
                    :content-type "application/x-www-form-urlencoded"
-                   :conn-timeout 1000
-                   :socket-timeout 1000
+                   :conn-timeout 5000
+                   :socket-timeout 5000
                    :accept "text/plain"}) => {:body "ERROR|102|Failed creating"} :times 1))
 
 
@@ -36,8 +36,8 @@
        (http/post "http://www.ancelutil.com.uy:8090/admEmpresa"
                   {:body "operacion=bajaGrupo&servicio=1&grupo=grupo1"
                    :content-type "application/x-www-form-urlencoded"
-                   :conn-timeout 1000
-                   :socket-timeout 1000
+                   :conn-timeout 5000
+                   :socket-timeout 5000
                    :accept "text/plain"}) => {:body "OK\n"} :times 1))
 
 
@@ -47,8 +47,8 @@
        (http/post "http://www.ancelutil.com.uy:8090/admEmpresa"
                   {:body "operacion=consultaGrupo&servicio=1&grupo=grupo1"
                    :content-type "application/x-www-form-urlencoded"
-                   :conn-timeout 1000
-                   :socket-timeout 1000
+                   :conn-timeout 5000
+                   :socket-timeout 5000
                    :accept "text/plain"}) => {:body "OK\n"} :times 1))
 
 
@@ -58,9 +58,9 @@
        (http/post "http://www.ancelutil.com.uy:8090/admEmpresa"
                   {:body "operacion=altaServicio&servicio=1&celular=099111222&nroTramite=1"
                    :content-type "application/x-www-form-urlencoded"
-                   :conn-timeout 1000
-                   :socket-timeout 1000
-                   :accept "text/plain"}) => {:body "OK\n"} :times 1))
+                   :conn-timeout 5000
+                   :socket-timeout 5000
+                   :accept "text/plain"}) => {:body "OK|1234567890\n"} :times 1))
 
 
 (fact "Unregister phone"
@@ -69,8 +69,8 @@
        (http/post "http://www.ancelutil.com.uy:8090/admEmpresa"
                   {:body "operacion=bajaServicio&servicio=1&celular=099111222&nroTramite=1"
                    :content-type "application/x-www-form-urlencoded"
-                   :conn-timeout 1000
-                   :socket-timeout 1000
+                   :conn-timeout 5000
+                   :socket-timeout 5000
                    :accept "text/plain"}) => {:body "OK\n"} :times 1))
 
 
@@ -80,8 +80,8 @@
        (http/post "http://www.ancelutil.com.uy:8090/admEmpresa"
                   {:body "operacion=consultaServicioHabilitado&servicio=1&celular=099111222"
                    :content-type "application/x-www-form-urlencoded"
-                   :conn-timeout 1000
-                   :socket-timeout 1000
+                   :conn-timeout 5000
+                   :socket-timeout 5000
                    :accept "text/plain"}) => {:body "OK\n"} :times 1))
 
 
@@ -91,8 +91,8 @@
        (http/post "http://www.ancelutil.com.uy:8090/admEmpresa"
                   {:body "operacion=altaCelularGrupo&servicio=1&celular=099111222&grupo=grupo1"
                    :content-type "application/x-www-form-urlencoded"
-                   :conn-timeout 1000
-                   :socket-timeout 1000
+                   :conn-timeout 5000
+                   :socket-timeout 5000
                    :accept "text/plain"}) => {:body "OK\n"} :times 1))
 
 
@@ -102,8 +102,8 @@
        (http/post "http://www.ancelutil.com.uy:8090/admEmpresa"
                   {:body "operacion=bajaCelularGrupo&servicio=1&celular=099111222&grupo=grupo1"
                    :content-type "application/x-www-form-urlencoded"
-                   :conn-timeout 1000
-                   :socket-timeout 1000
+                   :conn-timeout 5000
+                   :socket-timeout 5000
                    :accept "text/plain"}) => {:body "OK\n"} :times 1))
 
 
@@ -113,6 +113,6 @@
        (http/post "http://www.ancelutil.com.uy:8090/admEmpresa"
                   {:body "operacion=consultaCelularGrupo&servicio=1&celular=099111222&grupo=grupo1"
                    :content-type "application/x-www-form-urlencoded"
-                   :conn-timeout 1000
-                   :socket-timeout 1000
+                   :conn-timeout 5000
+                   :socket-timeout 5000
                    :accept "text/plain"}) => {:body "OK\n"} :times 1))
