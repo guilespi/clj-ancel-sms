@@ -5,7 +5,7 @@ this thing, maybe this library can make your life a little bit better.
 
 ## Usage
 
-The ANCEL API needs that you register all phones and groups you will be sending messages to.
+The Ancel API needs that you register all phones and groups you will be sending messages to.
 
 ### Administration
 
