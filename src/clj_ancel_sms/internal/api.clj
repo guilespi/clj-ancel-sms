@@ -29,7 +29,7 @@
                     (name operation))]
     (:body (http/post url
                       {:body (encode-attributes attributes)
-                       :content-type "application/x-www-form-urlencoded"
+                       :content-type "application/x-www-form-urlencoded;charset=UTF-8"
                        :conn-timeout 5000
                        :socket-timeout 5000
                        :accept "text/plain"}))))

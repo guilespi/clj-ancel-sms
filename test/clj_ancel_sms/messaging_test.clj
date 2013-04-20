@@ -10,7 +10,7 @@
       (provided
        (http/post "http://www.ancelutil.com.uy:8090/envioSMS"
                   {:body "txtCelularNumero=9111222&txtMensaje=text+message&txtNroServicio=1"
-                   :content-type "application/x-www-form-urlencoded"
+                   :content-type "application/x-www-form-urlencoded;charset=UTF-8"
                    :conn-timeout 5000
                    :socket-timeout 5000
                    :accept "text/plain"}) => {:body "El mensaje fue puesto en la cola para ser enviado\n"} :times 1))
@@ -24,7 +24,7 @@
       (provided
        (http/post "http://www.ancelutil.com.uy:8090/envioSMS"
                   {:body "txtCelularNumero=9111222&txtMensaje=text+message&txtNroServicio=1"
-                   :content-type "application/x-www-form-urlencoded"
+                   :content-type "application/x-www-form-urlencoded;charset=UTF-8"
                    :conn-timeout 5000
                    :socket-timeout 5000
                    :accept "text/plain"}) => {:body "Random unparsable failure\n"} :times 1))
@@ -35,7 +35,7 @@
       (provided
        (http/post "http://www.ancelutil.com.uy:8090/envioGrupo"
                   {:body "grupo=grupo1&mensaje=text+message&servicio=1"
-                   :content-type "application/x-www-form-urlencoded"
+                   :content-type "application/x-www-form-urlencoded;charset=UTF-8"
                    :conn-timeout 5000
                    :socket-timeout 5000
                    :accept "text/plain"}) => {:body "OK\n"} :times 1))
