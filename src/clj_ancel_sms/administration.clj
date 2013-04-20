@@ -26,8 +26,7 @@
   (let [response (api/execute :admEmpresa {:operacion "consultaGrupo"
                                            :servicio service
                                            :grupo group-name})]
-    (or (= response "OK\n")
-        (throw+ {:type ::api-failure :response (api/parse-error response)}))))
+    (= response "OK\n")))
 
 (defn register-phone
   "Registers a cellular phone in order for messages to be sent"
@@ -47,8 +46,7 @@
                                            :servicio service
                                            :celular phone
                                            :nroTramite tracking})]
-    (or (= response "OK\n")
-        (throw+ {:type ::api-failure :response (api/parse-error response)}))))
+    (= response "OK\n")))
 
 (defn phone-registered?
   "Checks whether a phone is registered for a service or not"
