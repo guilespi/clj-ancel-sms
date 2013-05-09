@@ -1,4 +1,5 @@
 (ns console.cli
+  (:gen-class)
   (:require [console.model :as model]
             [console.server :as server]
             [clj-ancel-sms.administration :as sms-admin]
@@ -6,7 +7,7 @@
   (:use [clojure.tools.cli :only [cli]]
         [slingshot.slingshot :only [try+ throw+]]))
 
-(def ^:dynamic *service* "1")
+(def ^:dynamic *service* "2")
 (def ^:dynamic *number* "99970")
 
 (declare commands)
@@ -191,7 +192,7 @@
   "Run me"
   [& args]
   (let [[options args banner] (cli args
-                                   ["-s" "--service" "service to use" :default "1"]
+                                   ["-s" "--service" "service to use" :default "2"]
                                    ["-n" "--number" "number to use" :default "99970"])]
     (binding [*service* (:service options)
               *number* (:number options)]
