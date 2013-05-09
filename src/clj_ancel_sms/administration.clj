@@ -54,8 +54,7 @@
   (let [response (api/execute :admEmpresa {:operacion "consultaServicioHabilitado"
                                            :servicio service
                                            :celular phone})]
-    (or (= response "OK\n")
-        (throw+ {:type ::api-failure :response (api/parse-error response)}))))
+    (= response "OK\n")))
 
 (defn contract-status
   "Checks the contract status for a specified number, this operacion
@@ -93,5 +92,4 @@
                                            :servicio service
                                            :celular phone
                                            :grupo group-name})]
-    (or (= response "OK\n")
-        (throw+ {:type ::api-failure :response (api/parse-error response)}))))
+    (= response "OK\n")))
