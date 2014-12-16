@@ -1,4 +1,4 @@
-(defproject clj-ancel-sms "0.1.0"
+(defproject clj-ancel-sms "0.2.0"
   :description "Library for Ancel's 'SMS Empresa' hosted service"
   :url "http://www.github.com/guilespi/clj-ancel-sms"
   :license {:name "Eclipse Public License"

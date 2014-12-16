@@ -5,7 +5,7 @@
 (defn to-cellphone
   [service phone message]
   (if-let [number (re-matches #"09(\d{7})" phone)]
-   (let [response (api/execute :envioSMS {:txtCelularNumero (number 1)
+   (let [response (api/execute :envioSMS {:txtCelularNumero phone
                                           :txtMensaje message
                                           :txtNroServicio service})]
      ;;I cannot believe this shit, how makes this an API OK response?
